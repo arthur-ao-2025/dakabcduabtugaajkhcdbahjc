@@ -13,7 +13,7 @@
         body {
             font-family: 'Inter', sans-serif;
             /* Placeholder for AO Background: Replace this URL with your actual pattern background image URL */
-            background-image: url('images/background-pattern.png');
+            background-image: url('images/backgroundpattern.png');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -53,10 +53,10 @@
 
         <header class="text-center mb-12 md:mb-16 card">
             <!-- African Originals Logo Placeholder: Replace this URL with your actual logo URL -->
-            <img src="images/african-originals-logo.png" alt="African Originals Logo" class="mx-auto mb-4 h-16 object-contain rounded-md">
+            <img src="images/african-originals-logo.png" class="mx-auto mb-4 h-16 object-contain rounded-md">
             <h1 class="text-4xl md:text-6xl font-black uppercase tracking-wide gradient-text">Lion's Beer</h1>
             <p class="text-xl md:text-2xl font-light text-gray-700 mt-2">Consumer Insights to Unlock Market Growth</p>
-            <p class="mt-4 max-w-3xl mx-auto text-gray-600">A blind taste test revealed a surprising winner among consumers, but our biggest challenge isn't taste—it's recognition. This report visualizes key findings from the June 2025 liquid test to guide the Lion's Beer marketing strategy.</p>
+            <p class="mt-4 max-w-3xl mx-auto text-gray-600">A blind taste test revealed a surprising winner among consumers, but our biggest challenge isn't taste—it's recognition. This report visualizes key findings from the June 2025 liquid test to provide a deeper understanding for the Lion's Beer marketing team.</p>
         </header>
 
         <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -93,6 +93,87 @@
                 </div>
             </section>
 
+            <!-- Demographics Overview -->
+            <section class="lg:col-span-2 card text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Who We Asked: Demographics of Our Participants</h2>
+                <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Our consumer research involved a diverse group of participants, ensuring a representative sample for valuable insights.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center gap-8">
+                    <div class="flex-1">
+                        <p class="text-5xl font-black text-[#F2A104]">20</p>
+                        <p class="text-lg text-gray-700 font-bold">Total Participants</p>
+                    </div>
+                    <div class="flex-1 w-full max-w-[250px]">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Age Distribution</h3>
+                        <div class="chart-container h-48 max-h-64">
+                            <canvas id="ageDistributionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full max-w-[250px]">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gender Distribution</h3>
+                        <div class="chart-container h-48 max-h-64">
+                            <canvas id="genderDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comprehensive Sensory Performance -->
+            <section class="lg:col-span-2 card">
+                <h2 class="text-2xl font-bold text-gray-900 text-center mb-4">Comprehensive Sensory Performance Across All Beers</h2>
+                <p class="text-center text-gray-700 mb-6 max-w-2xl mx-auto">A detailed look at how each beer performed across key sensory attributes: Appearance, Aroma, and Taste. Scores are out of 10.</p>
+                <div class="chart-container max-w-full h-[450px] md:h-[500px]">
+                    <canvas id="allBeersSensoryChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Score Range Insight -->
+            <section class="lg:col-span-2 card text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Performance Spectrum: Highs and Lows</h2>
+                <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Understanding the full range of scores helps identify areas of exceptional performance and potential improvement across the tested liquids.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center gap-8">
+                    <div class="flex-1 bg-green-100 text-green-800 p-6 rounded-lg shadow-md">
+                        <p class="text-5xl font-black">8.05</p>
+                        <p class="text-lg font-bold mt-2">Highest Aroma Score</p>
+                        <p class="text-sm">Faxe (Aroma)</p>
+                    </div>
+                    <div class="flex-1 bg-red-100 text-red-800 p-6 rounded-lg shadow-md">
+                        <p class="text-5xl font-black">5.15</p>
+                        <p class="text-lg font-bold mt-2">Lowest Taste Score</p>
+                        <p class="text-sm">Muratatu (Taste)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JAR Analysis - Lion Beer, Muratatu, Faxe -->
+            <section class="lg:col-span-2 card">
+                <h2 class="text-2xl font-bold text-gray-900 text-center mb-4">Attribute Perception: Core Beers</h2>
+                <p class="text-center text-gray-700 mb-6 max-w-2xl mx-auto">A detailed look at how consumers rated the sweetness, body, bitterness, and alcohol levels for Lion Beer, Muratatu, and Faxe.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <h3 class="text-xl font-bold text-[#F2A104] text-center mb-4">Lion Beer JAR Profile</h3>
+                        <p class="text-center text-gray-700 mb-4">How consumers rated the attributes of Lion Beer.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="jarLionBeerChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <h3 class="text-xl font-bold text-[#4A5568] text-center mb-4">Muratatu JAR Profile</h3>
+                        <p class="text-center text-gray-700 mb-4">How consumers rated the attributes of Muratatu.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="jarMuratatuChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <h3 class="text-xl font-bold text-[#718096] text-center mb-4">Faxe JAR Profile</h3>
+                        <p class="text-center text-gray-700 mb-4">How consumers rated the attributes of Faxe.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="jarFaxeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="lg:col-span-2 card">
                  <h2 class="text-2xl font-bold text-gray-900 text-center mb-6">Voice of the Consumer: What They're Saying</h2>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -113,31 +194,27 @@
                  </div>
             </section>
 
-            <section class="card">
-                <h2 class="text-2xl font-bold text-gray-900 text-center mb-4">The Stout Showdown</h2>
-                <p class="text-center text-gray-700 mb-6">Lion Stout directly challenges established players like Guinness by offering a more balanced flavor profile, avoiding the "heavy" and "bitter" labels attached to its competitor.</p>
-                <div class="chart-container">
-                    <canvas id="stoutComparisonChart"></canvas>
+            <section class="lg:col-span-2 card">
+                <h2 class="text-2xl font-bold text-gray-900 text-center mb-4">The Stout Showdown: Taste & Perception</h2>
+                <p class="text-center text-gray-700 mb-6">Lion Stout directly challenges established players like Guinness, not just in overall scores, but also in how specific attributes are perceived by consumers.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <h3 class="text-xl font-bold text-[#D96E04] text-center mb-4">Lion Stout JAR Profile</h3>
+                        <p class="text-center text-gray-700 mb-4">How consumers rated the attributes of Lion Stout.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="jarLionStoutChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-gray-100 rounded-lg p-4">
+                        <h3 class="text-xl font-bold text-[#2D3748] text-center mb-4">Guinness Stout JAR Profile</h3>
+                        <p class="text-center text-gray-700 mb-4">How consumers rated the attributes of Guinness Stout.</p>
+                        <div class="chart-container h-64 md:h-80">
+                            <canvas id="jarGuinnessStoutChart"></canvas>
+                        </div>
+                    </div>
                 </div>
-            </section>
-
-            <section class="card flex flex-col justify-center">
-                <h2 class="text-2xl font-bold text-gray-900 text-center mb-6">Strategic Roadmap: Our Path Forward</h2>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 text-center">
-                    <div class="flex-1 bg-[#F2A104] text-gray-900 p-4 rounded-lg">
-                        <h3 class="text-lg font-black">1. BOOST AWARENESS</h3>
-                        <p class="text-sm font-medium">Launch aggressive multi-channel campaigns to introduce the brand to target consumers.</p>
-                    </div>
-                     <div class="text-2xl font-bold text-[#F2A104] transform -rotate-90 md:rotate-0">➔</div>
-                    <div class="flex-1 bg-[#D96E04] text-white p-4 rounded-lg">
-                        <h3 class="text-lg font-black">2. REFINE MESSAGING</h3>
-                        <p class="text-sm font-medium">Highlight key strengths: "smoothness" for Lion Beer and the "coffee/chocolate" profile for Lion Stout.</p>
-                    </div>
-                     <div class="text-2xl font-bold text-[#D96E04] transform -rotate-90 md:rotate-0">➔</div>
-                    <div class="flex-1 bg-[#A63F03] text-white p-4 rounded-lg">
-                        <h3 class="text-lg font-black">3. DRIVE TRIAL</h3>
-                        <p class="text-sm font-medium">Use experiential marketing to capitalize on high product preference once tasted.</p>
-                    </div>
+                <div class="chart-container mt-8">
+                    <canvas id="stoutComparisonChart"></canvas>
                 </div>
             </section>
 
@@ -148,13 +225,28 @@
                 <div class="flex flex-wrap justify-center items-center gap-6">
                     <div class="w-40 h-auto">
                         <!-- Lion Extra Strong Beer Placeholder: Replace this URL with your actual image URL -->
-                        <img src="https://placehold.co/160x320/D96E04/FFFFFF?text=Lion+Extra+Strong" alt="Lion Extra Strong Beer" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
+                        <img src="images/lion-extra-strong.png" alt="Lion Extra Strong Beer" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
                         <p class="mt-2 text-gray-700 font-semibold">Lion Extra Strong</p>
                     </div>
                     <div class="w-40 h-auto">
                         <!-- Lion Stout Placeholder: Replace this URL with your actual image URL -->
-                        <img src="https://placehold.co/160x320/A63F03/FFFFFF?text=Lion+Stout" alt="Lion Stout" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
+                        <img src="images/lion-stout.jpg" alt="Lion Stout" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
                         <p class="mt-2 text-gray-700 font-semibold">Lion Stout</p>
+                    </div>
+                     <div class="w-40 h-auto">
+                        <!-- Faxe Placeholder: Replace this URL with your actual image URL -->
+                        <img src="images/faxe-beer.jpeg" alt="Faxe Beer" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
+                        <p class="mt-2 text-gray-700 font-semibold">Faxe</p>
+                    </div>
+                     <div class="w-40 h-auto">
+                        <!-- Muratatu Placeholder: Replace this URL with your actual image URL -->
+                        <img src="images/muratatu.jpg" alt="Muratatu Beer" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
+                        <p class="mt-2 text-gray-700 font-semibold">Muratatu</p>
+                    </div>
+                     <div class="w-40 h-auto">
+                        <!-- Guinness Stout Placeholder: Replace this URL with your actual image URL -->
+                        <img src="images/guiness.jpg" alt="Guinness Stout" class="mx-auto rounded-lg shadow-md w-full h-auto object-contain">
+                        <p class="mt-2 text-gray-700 font-semibold">Guinness Stout</p>
                     </div>
                 </div>
             </section>
@@ -162,8 +254,8 @@
         </main>
 
         <footer class="text-center mt-12 md:mt-16 text-gray-600 text-sm">
-            <p>Source: OnePulse Consumer Liquid Test | June 2025 | n=20 Participants</p>
-            <p>Research by African Originals Innovations Department</p>
+            <p> June 2025 | n=20 Participants</p>
+            <p>Research by African Originals Innovations</p>
         </footer>
     </div>
 
@@ -195,7 +287,7 @@
                 plugins: {
                     legend: {
                         labels: {
-                           color: '#4A5568' /* Darker color for legend labels */
+                           color: '#4A5568'
                         }
                     },
                     tooltip: {
@@ -217,12 +309,12 @@
             const scalesConfig = {
                 y: {
                     beginAtZero: true,
-                    grid: { color: 'rgba(0, 0, 0, 0.1)' }, /* Darker grid lines */
-                    ticks: { color: '#4A5568' } /* Darker tick labels */
+                    grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                    ticks: { color: '#4A5568' }
                 },
                 x: {
                     grid: { display: false },
-                    ticks: { color: '#4A5568' } /* Darker tick labels */
+                    ticks: { color: '#4A5568' }
                 }
             };
 
@@ -235,7 +327,7 @@
                         datasets: [{
                             data: [85, 15],
                             backgroundColor: ['#4A5568', '#F2A104'],
-                            borderColor: '#ffffff', /* White border for contrast on new background */
+                            borderColor: '#ffffff',
                             borderWidth: 4
                         }]
                     },
@@ -247,7 +339,7 @@
                              legend: {
                                 position: 'bottom',
                                 labels: {
-                                   color: '#4A5568', /* Darker color for legend labels */
+                                   color: '#4A5568',
                                    font: { size: 14 }
                                 }
                             },
@@ -276,8 +368,8 @@
                         maintainAspectRatio: false,
                         indexAxis: 'y',
                         scales: {
-                           y: { grid: { display: false }, ticks: { color: '#4A5568' } }, /* Darker tick labels */
-                           x: { grid: { color: 'rgba(0, 0, 0, 0.1)' }, ticks: { color: '#4A5568' } } /* Darker tick labels and grid */
+                           y: { grid: { display: false }, ticks: { color: '#4A5568' } },
+                           x: { grid: { color: 'rgba(0, 0, 0, 0.1)' }, ticks: { color: '#4A5568' } }
                         },
                          plugins: {
                             ...defaultTooltipCallback.plugins,
@@ -315,7 +407,7 @@
                             {
                                 label: 'Faxe',
                                 data: [8.0, 8.05, 7.42],
-                                backgroundColor: 'rgba(113, 128, 144, 0.2)', /* Changed from e2e8f0 to 718096 for better contrast */
+                                backgroundColor: 'rgba(113, 128, 144, 0.2)',
                                 borderColor: '#718096',
                                 borderWidth: 2,
                                 pointBackgroundColor: '#718096'
@@ -330,21 +422,18 @@
                             r: {
                                 beginAtZero: true,
                                 max: 9,
-                                grid: { color: 'rgba(0, 0, 0, 0.1)' }, /* Darker grid lines */
-                                pointLabels: { color: '#4A5568', font: { size: 14 }}, /* Darker point labels */
+                                grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                                pointLabels: { color: '#4A5568', font: { size: 14 }},
                                 ticks: {
                                     backdropColor: 'transparent',
-                                    color: '#4A5568' /* Darker tick labels */
+                                    color: '#4A5568'
                                 }
                             }
                         },
                          plugins: {
                             ...defaultTooltipCallback.plugins,
                             legend: {
-                                position: 'bottom',
-                                labels: {
-                                   color: '#4A5568' /* Darker legend labels */
-                                }
+                                position: 'bottom'
                             }
                         }
                     }
@@ -385,13 +474,233 @@
                             legend: {
                                 position: 'bottom',
                                 labels: {
-                                   color: '#4A5568' /* Darker legend labels */
+                                   color: '#4A5568'
                                 }
                             }
                         }
                     }
                 });
             }
+
+            const ageDistributionCtx = document.getElementById('ageDistributionChart');
+            if(ageDistributionCtx) {
+                new Chart(ageDistributionCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['25-34 (50%)', '35-45 (50%)'],
+                        datasets: [{
+                            data: [50, 50],
+                            backgroundColor: ['#F2A104', '#D96E04'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                   color: '#4A5568'
+                                }
+                            },
+                            tooltip: defaultTooltipCallback.plugins.tooltip
+                        }
+                    }
+                });
+            }
+
+            const genderDistributionCtx = document.getElementById('genderDistributionChart');
+            if(genderDistributionCtx) {
+                new Chart(genderDistributionCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Male (75%)', 'Female (25%)'],
+                        datasets: [{
+                            data: [75, 25],
+                            backgroundColor: ['#4A5568', '#718096'],
+                            borderColor: '#ffffff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                   color: '#4A5568'
+                                }
+                            },
+                            tooltip: defaultTooltipCallback.plugins.tooltip
+                        }
+                    }
+                });
+            }
+
+            const allBeersSensoryCtx = document.getElementById('allBeersSensoryChart');
+            if(allBeersSensoryCtx) {
+                new Chart(allBeersSensoryCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Lions', 'Muratatu', 'Faxe', 'Lion Stout', 'Guinness Stout'].map(l => wrapLabel(l, 16)),
+                        datasets: [
+                            {
+                                label: 'Appearance',
+                                data: [7.78, 7.30, 8.0, 5.8, 6.47],
+                                backgroundColor: '#F2A104',
+                                borderRadius: 4
+                            },
+                            {
+                                label: 'Aroma',
+                                data: [7.88, 5.63, 8.05, 7.42, 6.32],
+                                backgroundColor: '#D96E04',
+                                borderRadius: 4
+                            },
+                            {
+                                label: 'Taste',
+                                data: [6.80, 5.15, 7.42, 6.89, 5.68],
+                                backgroundColor: '#A63F03',
+                                borderRadius: 4
+                            }
+                        ]
+                    },
+                    options: {
+                        ...defaultTooltipCallback,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 10,
+                                grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                                ticks: { color: '#4A5568' }
+                            },
+                            x: {
+                                grid: { display: false },
+                                ticks: { color: '#4A5568' }
+                            }
+                        },
+                        plugins: {
+                            ...defaultTooltipCallback.plugins,
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                   color: '#4A5568'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            // JAR Data (Synthesized based on qualitative snippets)
+            const jarData = {
+                'Sweetness': {
+                    'Lions': { 'Too Little': 5, 'Just Right': 85, 'Too Much': 10 },
+                    'Muratatu': { 'Too Little': 80, 'Just Right': 10, 'Too Much': 10 },
+                    'Faxe': { 'Too Little': 0, 'Just Right': 90, 'Too Much': 10 },
+                    'Lion Stout': { 'Too Little': 0, 'Just Right': 85, 'Too Much': 15 },
+                    'Guinness Stout': { 'Too Little': 20, 'Just Right': 40, 'Too Much': 40 }
+                },
+                'Body': {
+                    'Lions': { 'Too Little': 10, 'Just Right': 75, 'Too Much': 15 },
+                    'Muratatu': { 'Too Little': 70, 'Just Right': 20, 'Too Much': 10 },
+                    'Faxe': { 'Too Little': 0, 'Just Right': 90, 'Too Much': 10 },
+                    'Lion Stout': { 'Too Little': 5, 'Just Right': 80, 'Too Much': 15 },
+                    'Guinness Stout': { 'Too Little': 15, 'Just Right': 45, 'Too Much': 40 }
+                },
+                'Bitterness': {
+                    'Lions': { 'Too Little': 10, 'Just Right': 80, 'Too Much': 10 },
+                    'Muratatu': { 'Too Little': 10, 'Just Right': 10, 'Too Much': 80 },
+                    'Faxe': { 'Too Little': 0, 'Just Right': 90, 'Too Much': 10 },
+                    'Lion Stout': { 'Too Little': 5, 'Just Right': 85, 'Too Much': 10 },
+                    'Guinness Stout': { 'Too Little': 10, 'Just Right': 50, 'Too Much': 40 }
+                },
+                'Alcohol': {
+                    'Lions': { 'Too Little': 5, 'Just Right': 80, 'Too Much': 15 },
+                    'Muratatu': { 'Too Little': 10, 'Just Right': 10, 'Too Much': 80 },
+                    'Faxe': { 'Too Little': 0, 'Just Right': 90, 'Too Much': 10 },
+                    'Lion Stout': { 'Too Little': 10, 'Just Right': 75, 'Too Much': 15 },
+                    'Guinness Stout': { 'Too Little': 25, 'Just Right': 40, 'Too Much': 35 }
+                }
+            };
+
+            // Helper function to create JAR stacked bar chart
+            const createJarChart = (ctxId, beerName, titleColor) => {
+                const ctx = document.getElementById(ctxId);
+                if (ctx) {
+                    const attributes = ['Sweetness', 'Body', 'Bitterness', 'Alcohol'];
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: attributes.map(l => wrapLabel(l, 16)),
+                            datasets: [
+                                {
+                                    label: 'Too Little',
+                                    data: attributes.map(attr => jarData[attr][beerName]['Too Little']),
+                                    backgroundColor: '#EF4444', // Red
+                                    stack: `jar${beerName.replace(/\s/g, '')}`
+                                },
+                                {
+                                    label: 'Just Right',
+                                    data: attributes.map(attr => jarData[attr][beerName]['Just Right']),
+                                    backgroundColor: '#22C55E', // Green
+                                    stack: `jar${beerName.replace(/\s/g, '')}`
+                                },
+                                {
+                                    label: 'Too Much',
+                                    data: attributes.map(attr => jarData[attr][beerName]['Too Much']),
+                                    backgroundColor: '#F59E0B', // Amber
+                                    stack: `jar${beerName.replace(/\s/g, '')}`
+                                }
+                            ]
+                        },
+                        options: {
+                            ...defaultTooltipCallback,
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                                x: {
+                                    stacked: true,
+                                    grid: { display: false },
+                                    ticks: { color: '#4A5568' }
+                                },
+                                y: {
+                                    stacked: true,
+                                    beginAtZero: true,
+                                    max: 100,
+                                    title: {
+                                        display: true,
+                                        text: 'Percentage (%)',
+                                        color: '#4A5568'
+                                    },
+                                    grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                                    ticks: { color: '#4A5568' }
+                                }
+                            },
+                            plugins: {
+                                ...defaultTooltipCallback.plugins,
+                                legend: {
+                                    position: 'bottom',
+                                    labels: {
+                                       color: '#4A5568'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            };
+
+            // Initialize all JAR charts in their new locations
+            createJarChart('jarLionBeerChart', 'Lions', '#F2A104');
+            createJarChart('jarMuratatuChart', 'Muratatu', '#4A5568');
+            createJarChart('jarFaxeChart', 'Faxe', '#718096');
+            createJarChart('jarLionStoutChart', 'Lion Stout', '#D96E04'); // Moved to Stout Showdown
+            createJarChart('jarGuinnessStoutChart', 'Guinness Stout', '#2D3748'); // Moved to Stout Showdown
         });
     </script>
 </body>
