@@ -61,6 +61,30 @@
 
         <main class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
+            <!-- Demographics Overview -->
+            <section class="lg:col-span-2 card text-center">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">Who We Asked</h2>
+                <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Our consumer research involved a diverse group of participants, ensuring a representative sample for valuable insights.</p>
+                <div class="flex flex-col md:flex-row justify-around items-center gap-8">
+                    <div class="flex-1">
+                        <p class="text-5xl font-black text-[#F2A104]">20</p>
+                        <p class="text-lg text-gray-700 font-bold">Total Participants</p>
+                    </div>
+                    <div class="flex-1 w-full max-w-[250px]">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Age Distribution</h3>
+                        <div class="chart-container h-48 max-h-64">
+                            <canvas id="ageDistributionChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="flex-1 w-full max-w-[250px]">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gender Distribution</h3>
+                        <div class="chart-container h-48 max-h-64">
+                            <canvas id="genderDistributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="lg:col-span-2 card flex flex-col md:flex-row items-center justify-center text-center gap-8">
                 <div class="flex-1">
                     <h2 class="text-2xl font-bold text-gray-900 mb-2">The Awareness Gap: Our Biggest Hurdle</h2>
@@ -90,30 +114,6 @@
                 <p class="text-center text-gray-700 mb-6">While Faxe scores high on overall sensory metrics, Lion Beer's preference win suggests a more complex appeal. Lion Stout holds its own with a strong aroma and taste profile, despite a lower appearance score.</p>
                 <div class="chart-container">
                     <canvas id="sensoryRadarChart"></canvas>
-                </div>
-            </section>
-
-            <!-- Demographics Overview -->
-            <section class="lg:col-span-2 card text-center">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">Who We Asked</h2>
-                <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Our consumer research involved a diverse group of participants, ensuring a representative sample for valuable insights.</p>
-                <div class="flex flex-col md:flex-row justify-around items-center gap-8">
-                    <div class="flex-1">
-                        <p class="text-5xl font-black text-[#F2A104]">20</p>
-                        <p class="text-lg text-gray-700 font-bold">Total Participants</p>
-                    </div>
-                    <div class="flex-1 w-full max-w-[250px]">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Age Distribution</h3>
-                        <div class="chart-container h-48 max-h-64">
-                            <canvas id="ageDistributionChart"></canvas>
-                        </div>
-                    </div>
-                    <div class="flex-1 w-full max-w-[250px]">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Gender Distribution</h3>
-                        <div class="chart-container h-48 max-h-64">
-                            <canvas id="genderDistributionChart"></canvas>
-                        </div>
-                    </div>
                 </div>
             </section>
 
